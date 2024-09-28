@@ -5,10 +5,10 @@
 #formula derive
 #finally submit variables
 
-Person1: Ramesh
-Person2: Suresh
+PERSON1: Ramesh
+PERSON2: Suresh
 
-echo "$Person1: Hi $Person2, how are you"
-echo "$Person2: Hello $Person1 I am fine. What about you!"
-echo "$Person1: I am doing good $Person2. Whats going on?"
-echo "$Person2: I started learning shell script $Person1"
+echo "$PERSON1: Hi $PERSON2, how are you"
+echo "$PERSON2: Hello $PERSON1 I am fine. What about you!"
+echo "$PERSON1: I am doing good $PERSON2. Whats going on?"
+echo "$PERSON2: I started learning shell script $PERSON1"
