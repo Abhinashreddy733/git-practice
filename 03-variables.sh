@@ -1,12 +1,12 @@
 #! /bin/bash
 
-#Example
+#Example 
 #Let's say x=0, y=1
 #formula derive
 #finally submit variables
 
-PERSON1: Ramesh
-PERSON2: Suresh
+PERSON1=Ramesh
+PERSON2=Suresh
 
 echo "$PERSON1: Hi $PERSON2, how are you"
 echo "$PERSON2: Hello $PERSON1 I am fine. What about you!"
