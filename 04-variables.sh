@@ -1,5 +1,5 @@
 #! /bin/bash
-
+# arguments like $1 & $2 to avoid login opening the script
 PERSON1=$1
 PERSON2=$2
 
