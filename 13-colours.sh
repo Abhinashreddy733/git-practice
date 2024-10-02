@@ -39,7 +39,7 @@ echo "GIT is not installed. Going to install it"
 dnf list installed mysql
  if [ $? -ne 0 ]
 then
-echo "mysql is not insatlled $R failed $N"
+echo "mysql is not insatlled"
 dnf install mysql -y
 VALIDATE $? "Installing MySQL"
 else
