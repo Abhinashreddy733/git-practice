@@ -18,7 +18,7 @@ VALIDATE ()
 {
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 is...$R FAILED $N"   # $N means ending that colour 
+        echo -e "$2 is...$R FAILED $N"   # $N means ending that colour & -e is option
         exit 1
     else
         echo -e "$2 is... $G SUCCESS $N"
@@ -32,7 +32,7 @@ if ($? -ne 0)
 then 
 echo "GIT is not installed. Going to install it"
       dnf install git -y
-      validate $? "Installing GIT"
+      VALIDATE $? "Installing GIT"
 
  else "Git is already installed"
  fi
