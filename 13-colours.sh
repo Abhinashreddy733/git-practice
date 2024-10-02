@@ -7,14 +7,14 @@ N="\e[0m"
 
 CHECK_ROOT()      #If we call the check root then it will get executed
 {
-    if ( $USERID -ne 0 )
+    if [ $USERID -ne 0 ]
        then 
        echo "Please run the script with root preveleges"
        exit 1
        fi
 }
 
-VALIDATE ()
+VALIDATE()
 {
     if [ $1 -ne 0 ]
     then
@@ -23,12 +23,12 @@ VALIDATE ()
     else
         echo -e "$2 is... $G SUCCESS $N"
 fi
+}
 
 CHECK_ROOT
+dnf list installed git
 
-dnf list installed
-
-if ($? -ne 0)
+if [ $? -ne 0 ]
 then 
 echo "GIT is not installed. Going to install it"
       dnf install git -y

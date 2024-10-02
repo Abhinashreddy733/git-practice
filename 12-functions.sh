@@ -23,7 +23,7 @@ fi
 }
 CHECK_ROOT        #----> calling check_root condition
 
-dnf list installed
+dnf list installed git
 if [ $? -ne 0 ]
 then 
 echo "GIT is not installed. Going to install it"
