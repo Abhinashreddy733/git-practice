@@ -33,6 +33,5 @@ then
 echo "GIT is not installed. Going to install it"
       dnf install git -y
       VALIDATE $? "Installing GIT"
-
  else "Git is already installed"
  fi
