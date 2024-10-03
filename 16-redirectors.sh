@@ -5,7 +5,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)  # --> f1 means Fragment i.e, log & -d m
 TIMESTAMP=$(date +%Y-m-%d-%H-%M-%S)
 LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP"
 
-mkdir -vp /var/log/shell-script/  # As we dont have logs folder we need to create it
+mkdir -p $LOGS_FOLDER  # As we dont have logs folder we need to create it -p if dir is created it wont show any error if not it will show some error
 
 USERID=$(id -u)
 R="\e[31m"
