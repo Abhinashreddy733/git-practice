@@ -3,7 +3,8 @@
 LOGS_FOLDER="/var/log/shell_script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)  # --> f1 means Fragment i.e, log & -d means Delimiter
 TIMESTAMP=$(date +%Y-m-%d-%H-%M-%S)
-LOGS_FILE=$"LOGS_FOLDER/SCRIPT_NAME-TIMESTAMP"
+LOGS_FILE="$LOGS_FOLDER/$SCRIPT_NAME-$TIMESTAMP"
+
 mkdir -vp /var/log/shell-script/  # As we dont have logs folder we need to create it
 
 USERID=$(id -u)
@@ -12,7 +13,7 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
-CHECK_OUT(){
+CHECK_ROOT(){
     if ($? -ne 0)
     then
     echo -e " $R Plese run the script with the help of root credentials $N" | tee -a $LOGS_FILE
@@ -37,7 +38,7 @@ USAGE(){
 }
 
 # to know date & time of execution of script
-echo "Script started executing at: $date" | tee -a $LOGS_FILE
+echo "Script started executing at: $(date)" | tee -a $LOGS_FILE
 
 CHECK_ROOT
 
