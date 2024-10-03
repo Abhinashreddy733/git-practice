@@ -33,7 +33,7 @@ VALIDATE(){
 
 # We should show proper info to the user & to show how many arguments are passed
 USAGE(){
-      echo -e "$R USAGE :$N sudo sh 16.redirectors.sh package1 package2 ..."
+      echo -e "$R USAGE $N:: sudo sh 16.redirectors.sh package1 package2 ..."
       exit 1
 }
 
