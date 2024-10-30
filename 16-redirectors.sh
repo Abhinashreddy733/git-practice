@@ -15,7 +15,7 @@ Y="\e[33m"
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R Please run this script with root priveleges $N" | tee -a $LOG_FILE
+        echo -e "$R Please run this script with root priveleges $N" | tee -a $LOG_FILE   # writes logs to multile destinations
         exit 1
     fi
 }
@@ -30,7 +30,7 @@ VALIDATE(){
     fi
 }
 
-# We should show proper info to the user on terminal 
+# Ae we are passing some argumets i am using usage function. And also should show proper info to the user on terminal 
 USAGE(){
     echo -e "$R USAGE:: $N sudo sh 16-redirectors.sh package1 package2 ..."
     exit 1
@@ -58,3 +58,7 @@ do
         echo -e "$package is already $Y installed..nothing to do $N" | tee -a $LOG_FILE
     fi
 done
+
+
+# After executing go and check logs in cd var/log/shell-script/
+# [ ec2-user@ip-172-31-88-117 ~/git-practice ]$ cd /var/log/shell-script/ 
