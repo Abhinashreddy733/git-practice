@@ -3,7 +3,7 @@
 set -e
 # -e setting the automatic exit if we get error, set -ex for debug
 
-failur {
+failur() {
 echo "Failed at ($1:$2)"
 }
 
