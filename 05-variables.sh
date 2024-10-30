@@ -4,7 +4,7 @@
 # It leads to security breach to avoid that we are usig read command.
 
 echo "Please enter the USERNAME:"
-read USERNAME     # Takes input into username variable
+read USERNAME     # Takes input into username variable (Interrupt and ask for input)
 echo "The username entered is :$USERNAME"
 
 # To hide the username while entering it to provide more security
