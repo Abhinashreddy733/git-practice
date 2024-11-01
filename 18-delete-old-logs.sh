@@ -22,4 +22,4 @@ while IFS= read -r file #IFS,internal field seperatpor, empty it will ignore whi
 do
 echo "Deleting the file: $file"
 rm -rf $file
-done <<<< $FILES  # giving i/p to done greater than means o/p & lessthan means i/p.
+done <<< $FILES  # giving i/p to done greater than means o/p & lessthan means i/p.
